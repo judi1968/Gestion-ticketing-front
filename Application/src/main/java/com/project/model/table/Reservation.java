@@ -1,7 +1,9 @@
 package com.project.model.table;
 
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import com.project.pja.databases.generalisation.annotation.AttributDb;
 import com.project.pja.databases.generalisation.annotation.IdDb;
@@ -101,6 +103,15 @@ public class Reservation {
      @ShowTable(name = "Hotel" , numero = 5)
     public String getNomHotel() {
         return hotel != null ? hotel.getNom() : "N/A";
+    }
+    public static List<Reservation> getReservationByDate(List<Reservation> reservations, Date date) {
+        List<Reservation> result = new ArrayList<>();
+        for (Reservation reservation : reservations) {
+            if (reservation.getDateHeureArrive().equals(date)) {
+                result.add(reservation);
+            }
+        }
+        return result;
     }
 
 

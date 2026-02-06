@@ -23,14 +23,14 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Filtre</h4>
-                    <form class="forms-sample" action="listeVoitureParVoyage" method="get">
+                    <form class="forms-sample" action="/" method="get">
                       <div class="row">
                         <div class="col-md-6">
                          
                           <div class="form-group row">
-                            <label for="dateDiffusion" class="col-sm-3 col-form-label">Chosir mois anne</label>
+                            <label for="dateDiffusion" class="col-sm-3 col-form-label">Chosir Date</label>
                             <div class="col-sm-9">
-                              <input type="month" class="form-control" id="dateDiffusion" name="moisAnne" >
+                              <input type="date" class="form-control" id="dateDiffusion" name="date_reservation" >
                             </div>
                             <h1>            <%= (String) request.getAttribute("ca")  %>
 </h1>
