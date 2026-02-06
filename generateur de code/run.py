@@ -5,7 +5,7 @@ import re
 # --- Configuration PostgreSQL ---
 config_pg = {
     "host": "localhost",
-    "dbname": "taxi_brousse",
+    "dbname": "gestion_ticketing",
     "user": "postgres",
     "password": "mdpprom15",
     "port": 5432
