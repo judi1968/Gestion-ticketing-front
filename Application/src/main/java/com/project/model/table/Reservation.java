@@ -107,7 +107,7 @@ public class Reservation {
     public static List<Reservation> getReservationByDate(List<Reservation> reservations, Date date) {
         List<Reservation> result = new ArrayList<>();
         for (Reservation reservation : reservations) {
-            if (reservation.getDateHeureArrive().equals(date)) {
+            if (reservation.getDateHeureArrive().toString().equals(date.toString())) {
                 result.add(reservation);
             }
         }

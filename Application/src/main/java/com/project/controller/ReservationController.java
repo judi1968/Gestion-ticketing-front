@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 import com.project.model.table.Hotel;
 import com.project.model.table.Reservation;
 import com.project.pja.databases.generalisation.DB;
@@ -43,8 +44,7 @@ public String showReservationListe(@RequestParam(required = false) String date_r
     if(date_reservation != null) {
         Date date = Date.valueOf(date_reservation);
        List<Reservation> filteredReservations = Reservation.getReservationByDate(reservations, date);
-       
-
+        model.addAttribute("ca",date.toString()) ;
 
        
        a = DB.getTableau(filteredReservations, new Reservation(), "Liste reservation", "");
