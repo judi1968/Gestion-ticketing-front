@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.project.pja.databases.generalisation.annotation.AttributDb;
 import com.project.pja.databases.generalisation.annotation.IdDb;
 import com.project.pja.databases.generalisation.annotation.ShowTable;
@@ -28,10 +29,16 @@ public class Reservation {
 
     
     @AttributDb(name = "date_heure_arrive")
+    @JsonFormat(
+    shape = JsonFormat.Shape.STRING,
+    pattern = "MMM dd, yyyy, hh:mm:ss a",
+    locale = "en"
+)
     private Date dateHeureArrive;
 
 
     @AttributDb(name = "id_hotel")
+    
     private Hotel hotel; // ← objet Hotel
 
     public Reservation() {
