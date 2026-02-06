@@ -5,6 +5,7 @@ import java.util.Date;
 
 import com.project.pja.databases.generalisation.annotation.AttributDb;
 import com.project.pja.databases.generalisation.annotation.IdDb;
+import com.project.pja.databases.generalisation.annotation.ShowTable;
 import com.project.pja.databases.generalisation.annotation.TableDb;
 
 @TableDb(name = "reservation")
@@ -80,6 +81,26 @@ public class Reservation {
 
     public void setHotel(Hotel hotel) {
         this.hotel = hotel;
+    }
+    @ShowTable(name = "ID Réservation" , numero = 1)
+    public String getIdString() {
+        return id;
+    }
+    @ShowTable(name = "ID Client" , numero = 2)
+    public String getIdClientString() {
+        return idClient;
+    }
+    @ShowTable(name = "Nombre de passagers" , numero = 3)
+    public Integer getNbPasssagerInt() {
+        return nbPasssager;
+    }
+    @ShowTable(name = "Date d'arrivée" , numero = 4)
+    public Date getDateHeureArriveDate() {
+        return dateHeureArrive;
+    }
+     @ShowTable(name = "Hotel" , numero = 5)
+    public String getNomHotel() {
+        return hotel != null ? hotel.getNom() : "N/A";
     }
 
 

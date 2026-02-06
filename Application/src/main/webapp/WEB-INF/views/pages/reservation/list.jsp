@@ -1,10 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page import="java.util.List" %>
-<%@ page import="com.project.model.table.VoyageVoiture" %>
-<%
-    List<VoyageVoiture> voyageVoitures = (List<VoyageVoiture>) request.getAttribute("voyageVoitures");
-    String error = (String) request.getAttribute("error");
-%>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,15 +17,6 @@
             <div class="page-header">
               <h3 class="page-title">Liste des voitures par voyage</h3>
             </div>
-            
-            <% if (error != null) { %>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-              <%= error %>
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <% } %>
             
             <div class="row">
               <div class="col-md-12 grid-margin stretch-card">
@@ -60,9 +45,8 @@
               </div>
             </div>
 
-            <%= (String) request.getAttribute("voyageParVoitureTab")  %>
-            <%= (String) request.getAttribute("caProduitTab")  %>
-            <%= (String) request.getAttribute("achatProduitTab")  %>
+            <%= (String) request.getAttribute("as")  %>
+       
 
             
           </div>

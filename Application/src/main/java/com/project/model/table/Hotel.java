@@ -40,6 +40,10 @@ public class Hotel {
     public void setNom(String nom) {
         this.nom = nom;
     }
+    public Hotel(String nom) {
+        this.id = id;
+        this.nom = nom;
+    }
 
 
 }
