@@ -40,7 +40,6 @@ public String showReservationListe(@RequestParam(required = false) String date_r
             ApiResponse.class
         );
 
-        // 🔥 ICI tu récupères la liste
         List<Reservation> reservations = response.getData();
     String a = "";
   
