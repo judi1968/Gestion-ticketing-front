@@ -143,7 +143,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Designed   by <a href="https://themeforest.net/user/hugebinary" target="_blank">HugeBinary</a> 2022</p>
+                <p>Build by <a href="https://themeforest.net/user/hugebinary" target="_blank">ETU1968</a> in 2026</p>
             </div>
         </div>
         <!--**********************************
@@ -168,13 +168,8 @@
         Scripts
     ***********************************-->
     <!-- Required vendors -->
-    <script src="${pageContext.request.contextPath}/assets/vendor/global/global.min.js"></script>
-	<script src="${pageContext.request.contextPath}/assets/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
-	
-    <script src="${pageContext.request.contextPath}/assets/js/custom.js"></script>
-	<script src="${pageContext.request.contextPath}/assets/js/dlabnav-init.js"></script>
-	<script src="${pageContext.request.contextPath}/assets/js/demo.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/styleSwitcher.js"></script>
+        <%@ include file="../../includes/js.jsp" %>
+
 </body>
 
 <!-- Mirrored from getskills.dexignzone.com/xhtml/form-element.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Oct 2022 13:50:25 GMT -->
