@@ -75,16 +75,31 @@ function deleteAllCookie(reload = true)
 	
 	/* Dz Theme Demo Settings  */
 	
+	// var dlabThemeSet0 = { /* Default Theme */
+	// 	typography: "poppins",
+	// 	version: "light",
+	// 	layout: "vertical",
+	// 	primary: "color_1",
+	// 	secondary: "color_1",
+	// 	headerBg: "color_1",
+	// 	navheaderBg: "color_1",
+	// 	sidebarBg: "color_1",
+	// 	sidebarStyle: "full",
+	// 	sidebarPosition: "fixed",
+	// 	headerPosition: "fixed",
+	// 	containerLayout: "full",
+	// };
+
 	var dlabThemeSet0 = { /* Default Theme */
 		typography: "poppins",
-		version: "light",
-		layout: "vertical",
-		primary: "color_1",
-		secondary: "color_1",
+		version: "dark",
+		layout: "horizontal",
+		primary: "color_5",
+		secondary: "color_8",
 		headerBg: "color_1",
 		navheaderBg: "color_1",
-		sidebarBg: "color_1",
-		sidebarStyle: "full",
+		sidebarBg: "color_5",
+		sidebarStyle: "icon-hover",
 		sidebarPosition: "fixed",
 		headerPosition: "fixed",
 		containerLayout: "full",

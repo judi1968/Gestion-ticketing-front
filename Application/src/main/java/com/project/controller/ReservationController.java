@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.annotation.JsonCreator.Mode;
+import com.project.configuration.Ticketing;
 import com.project.dto.ApiResponse;
 import com.project.model.table.Hotel;
 import com.project.model.table.Reservation;
@@ -30,11 +31,9 @@ public class ReservationController {
  * @throws Exception 
  */
 @GetMapping("/")
-public String showReservationListe(@RequestParam(required = false) String date_reservation, Model model) throws Exception {
-
-    
-  String url = "http://localhost:8080/test_depoloiment/reservations?dateReservation="+date_reservation;
-
+public String showReservationListe(@RequestParam(required = false) String date_reservation, Model model) throws Exception {    
+  String url = Ticketing.getUrlBackOffice()+"/reservations?dateReservation="+date_reservation+"&token="+Ticketing.getToken();
+    System.out.println(url);
         ApiResponse response = restTemplate.getForObject(
             url,
             ApiResponse.class
